@@ -1,225 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modern Bhatti</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Bhatti</title>
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  padding-bottom: 90px;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #fff;
-    }
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
 
-    /* HERO */
-    .hero {
-      min-height: 80vh;
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-                  url('https://images.unsplash.com/photo-1604908176997-431f3b9c84b3');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
+.hero h1 {
+  color: #ff6b2c;
+  font-size: 36px;
+}
 
-    .hero div {
-      max-width: 500px;
-    }
+.hero p {
+  color: #ccc;
+}
 
-    .hero h1 {
-      font-size: 42px;
-      color: #ff6b2c;
-    }
+.btn {
+  padding: 12px 20px;
+  border-radius: 25px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+}
 
-    .location {
-      font-size: 20px;
-      font-weight: bold;
-    }
+.btn-primary {
+  background: #ff6b2c;
+  color: #fff;
+}
 
-    .subtitle {
-      color: #ccc;
-      margin: 10px 0;
-    }
+.btn-outline {
+  border: 2px solid #ff6b2c;
+  color: #ff6b2c;
+  background: transparent;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      border-radius: 30px;
-      text-decoration: none;
-      margin: 10px;
-    }
+/* MENU */
+.section {
+  padding: 30px 20px;
+}
 
-    .btn-primary {
-      background: #ff6b2c;
-      color: white;
-    }
+.section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    .btn-secondary {
-      border: 2px solid #ff6b2c;
-      color: #ff6b2c;
-    }
+.card {
+  background: #1a1a1a;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-    /* MENU */
-    .menu {
-      padding: 40px 20px;
-      text-align: center;
-    }
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
 
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
+.price {
+  margin-top: 10px;
+  font-weight: bold;
+}
 
-    .menu-card {
-      background: #222;
-      padding: 20px;
-      border-radius: 10px;
-      transition: 0.3s;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 0.6s ease forwards;
-    }
+/* WHY US */
+.why {
+  text-align: center;
+  padding: 30px;
+}
 
-    .menu-card:nth-child(2) {
-      animation-delay: 0.2s;
-    }
-    .menu-card:nth-child(3) {
-      animation-delay: 0.4s;
-    }
+.why p {
+  margin: 10px 0;
+}
 
-    .menu-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    }
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+}
 
-    .menu-card img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* TRUST */
-    .trust {
-      background: #1a1a1a;
-      padding: 30px;
-      text-align: center;
-    }
-
-    .features {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    /* FOOTER */
-    footer {
-      background: black;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
-
-    /* WHATSAPP BUTTON */
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 14px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-  </style>
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  z-index: 1000;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div>
-      <h1>Modern Bhatti</h1>
-      <p class="location">Authentic Flavors of Machhapokhari</p>
-      <p class="subtitle">
-        Experience traditional Nepali cuisine with a modern twist.
-      </p>
+<!-- HERO -->
+<div class="hero">
+  <h1>Modern Bhatti</h1>
+  <p>Authentic Flavors of Machhapokhari</p>
+  <p>Experience traditional Nepali cuisine with a modern twist.</p>
 
-      <a href="#menu" class="btn btn-primary">View Menu</a>
-      <a href="#contact" class="btn btn-secondary">Contact Us</a>
-    </div>
-  </section>
+  <button class="btn btn-primary">View Menu</button>
+  <button class="btn btn-outline">Contact Us</button>
+</div>
 
-  <!-- MENU -->
-  <section id="menu" class="menu">
-    <h2>Our Menu</h2>
+<!-- MENU -->
+<div class="section">
+  <h2>Our Menu</h2>
 
-    <div class="menu-grid">
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1604908176997-431b1c69f60c" alt="Momo">
+    <h3>Chicken Momo</h3>
+    <p>Steamed dumplings filled with chicken</p>
+    <div class="price">Rs. 180</div>
+  </div>
 
-      <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950" loading="lazy">
-        <h3>Buff Sekuwa</h3>
-        <p>Juicy buffalo meat grilled with spices</p>
-        <span>Rs. 450</span>
-      </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246" alt="Chowmein">
+    <h3>Chicken Chowmein</h3>
+    <p>Stir-fried noodles with chicken & veggies</p>
+    <div class="price">Rs. 220</div>
+  </div>
 
-      <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1625943555419-56a2cb596640" loading="lazy">
-        <h3>Chicken Momo</h3>
-        <p>Steamed dumplings filled with chicken</p>
-        <span>Rs. 180</span>
-      </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1604908554168-84d5e2a6d3c2" alt="Sekuwa">
+    <h3>Buff Sekuwa</h3>
+    <p>Juicy buffalo meat grilled with spices</p>
+    <div class="price">Rs. 350</div>
+  </div>
 
-      <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1604908554161-2d9b3e2d1b76" loading="lazy">
-        <h3>Chicken Chowmein</h3>
-        <p>Stir-fried noodles with chicken & veggies</p>
-        <span>Rs. 220</span>
-      </div>
+</div>
 
-    </div>
-  </section>
+<!-- WHY US -->
+<div class="why">
+  <h2>Why Choose Us</h2>
+  <p>⭐ 4.8 Rating</p>
+  <p>🔥 Fresh Ingredients</p>
+  <p>📍 Machhapokhari, Kathmandu</p>
+</div>
 
-  <!-- TRUST -->
-  <section class="trust">
-    <h2>Why Choose Us</h2>
-    <div class="features">
-      <div>⭐ 4.8 Rating</div>
-      <div>🔥 Fresh Ingredients</div>
-      <div>📍 Machhapokhari Location</div>
-    </div>
-  </section>
+<!-- FOOTER -->
+<div class="footer">
+  <p>📍 Machhapokhari, Kathmandu</p>
+  <p>📞 98XXXXXXXX</p>
+  <p>© 2026 Modern Bhatti</p>
+</div>
 
-  <!-- FOOTER -->
-  <footer id="contact">
-    <p>📍 Machhapokhari, Kathmandu</p>
-    <p>📞 98XXXXXXXX</p>
-    <p>© 2026 Modern Bhatti</p>
-  </footer>
-
-  <!-- WHATSAPP -->
-  <a href="https://wa.me/97798XXXXXXXX" class="whatsapp" target="_blank">
-    💬 Order on WhatsApp
-  </a>
+<!-- WHATSAPP BUTTON -->
+<a class="whatsapp-btn" href="https://wa.me/98XXXXXXXX" target="_blank">
+  💬 Order on WhatsApp
+</a>
 
 </body>
 </html>
