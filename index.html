@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Bhatti</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+                  url('https://images.unsplash.com/photo-1604908176997-431f3b9c84b3');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      color: #ff6b2c;
+    }
+
+    .location {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      color: #ccc;
+      margin: 10px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      margin: 10px;
+    }
+
+    .btn-primary {
+      background: #ff6b2c;
+      color: white;
+    }
+
+    .btn-secondary {
+      border: 2px solid #ff6b2c;
+      color: #ff6b2c;
+    }
+
+    /* MENU */
+    .menu {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .menu h2 {
+      margin-bottom: 20px;
+    }
+
+    .menu-card {
+      background: #222;
+      padding: 20px;
+      margin: 10px auto;
+      max-width: 300px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    .menu-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* TRUST */
+    .trust {
+      background: #1a1a1a;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* FOOTER */
+    footer {
+      background: black;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>Modern Bhatti</h1>
+      <p class="location">Authentic Flavors of Machhapokhari</p>
+      <p class="subtitle">
+        Experience traditional Nepali cuisine with a modern twist.
+      </p>
+
+      <a href="#menu" class="btn btn-primary">View Menu</a>
+      <a href="#contact" class="btn btn-secondary">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
+
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
+      <h3>Buff Sekuwa</h3>
+      <p>Juicy buffalo meat grilled with spices</p>
+      <span>Rs. 450</span>
+    </div>
+
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust">
+    <h2>Why Choose Us</h2>
+    <div class="features">
+      <div>⭐ 4.8 Rating</div>
+      <div>🔥 Fresh Ingredients</div>
+      <div>📍 Machhapokhari Location</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <p>📍 Machhapokhari, Kathmandu</p>
+    <p>📞 98XXXXXXXX</p>
+    <p>© 2026 Modern Bhatti</p>
+  </footer>
+
+</body>
+</html>
